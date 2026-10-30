@@ -1,0 +1,37 @@
+$ k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.1.json 01-first-test.js
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 1       0.522031/s
+    checks_succeeded...: 100.00% 1 out of 1
+    checks_failed......: 0.00%   0 out of 1
+
+    ✓ status is 200
+
+    HTTP
+    http_req_blocked...............: avg=632.1ms  min=632.1ms  med=632.1ms  max=632.1ms  p(90)=632.1ms  p(95)=632.1ms  p(99)=632.1ms 
+    http_req_connecting............: avg=277.72ms min=277.72ms med=277.72ms max=277.72ms p(90)=277.72ms p(95)=277.72ms p(99)=277.72ms
+    http_req_duration..............: avg=276.11ms min=276.11ms med=276.11ms max=276.11ms p(90)=276.11ms p(95)=276.11ms p(99)=276.11ms
+      { expected_response:true }...: avg=276.11ms min=276.11ms med=276.11ms max=276.11ms p(90)=276.11ms p(95)=276.11ms p(99)=276.11ms
+    http_req_failed................: 0.00%  0 out of 1
+    http_req_receiving.............: avg=384µs    min=384µs    med=384µs    max=384µs    p(90)=384µs    p(95)=384µs    p(99)=384µs   
+    http_req_sending...............: avg=680µs    min=680µs    med=680µs    max=680µs    p(90)=680µs    p(95)=680µs    p(99)=680µs   
+    http_req_tls_handshaking.......: avg=336.97ms min=336.97ms med=336.97ms max=336.97ms p(90)=336.97ms p(95)=336.97ms p(99)=336.97ms
+    http_req_waiting...............: avg=275.04ms min=275.04ms med=275.04ms max=275.04ms p(90)=275.04ms p(95)=275.04ms p(99)=275.04ms
+    http_reqs......................: 1      0.522031/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.91s    min=1.91s    med=1.91s    max=1.91s    p(90)=1.91s    p(95)=1.91s    p(99)=1.91s   
+    iterations.....................: 1      0.522031/s
+    vus............................: 1      min=1      max=1
+    vus_max........................: 1      min=1      max=1
+
+    NETWORK
+    data_received..................: 7.3 kB 3.8 kB/s
+    data_sent......................: 1.8 kB 938 B/s
+
+
+
+
+Exit code: 0

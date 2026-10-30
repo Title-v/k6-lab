@@ -1,0 +1,50 @@
+$ k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.6-normal.json 06-thresholds.js
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate>0.99' rate=100.00%
+
+    http_req_duration
+    ✓ 'p(95)<1500' p(95)=435.45ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 134     4.301784/s
+    checks_succeeded...: 100.00% 134 out of 134
+    checks_failed......: 0.00%   0 out of 134
+
+    ✓ status is 200
+    ✓ pizza has a name
+
+    HTTP
+    http_req_blocked...............: avg=24.19ms  min=0s       med=1µs      max=552.72ms p(90)=2µs      p(95)=36.89µs  p(99)=542.02ms
+    http_req_connecting............: avg=11.76ms  min=0s       med=0s       max=272.02ms p(90)=0s       p(95)=0s       p(99)=263.55ms
+    http_req_duration..............: avg=346.22ms min=280.5ms  med=341.43ms max=491.66ms p(90)=408.14ms p(95)=435.45ms p(99)=477.01ms
+      { expected_response:true }...: avg=346.22ms min=280.5ms  med=341.43ms max=491.66ms p(90)=408.14ms p(95)=435.45ms p(99)=477.01ms
+    http_req_failed................: 0.00% 0 out of 67
+    http_req_receiving.............: avg=115.35µs min=33µs     med=103µs    max=334µs    p(90)=185.8µs  p(95)=217.6µs  p(99)=313.53µs
+    http_req_sending...............: avg=313.5µs  min=75µs     med=252µs    max=1.54ms   p(90)=477.6µs  p(95)=545.1µs  p(99)=997.81µs
+    http_req_tls_handshaking.......: avg=12.27ms  min=0s       med=0s       max=277.44ms p(90)=0s       p(95)=0s       p(99)=275.22ms
+    http_req_waiting...............: avg=345.79ms min=279.98ms med=340.95ms max=491.42ms p(90)=407.83ms p(95)=435.11ms p(99)=476.76ms
+    http_reqs......................: 67    2.150892/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.37s    min=1.28s    med=1.34s    max=1.9s     p(90)=1.43s    p(95)=1.48s    p(99)=1.87s   
+    iterations.....................: 67    2.150892/s
+    vus............................: 1     min=1       max=3
+    vus_max........................: 3     min=3       max=3
+
+    NETWORK
+    data_received..................: 87 kB 2.8 kB/s
+    data_sent......................: 12 kB 388 B/s
+
+
+
+
+Exit code: 0

@@ -1,0 +1,150 @@
+{
+    "metrics": {
+        "http_req_blocked": {
+            "min": 573.173,
+            "med": 573.173,
+            "max": 573.173,
+            "p(90)": 573.173,
+            "p(95)": 573.173,
+            "p(99)": 573.173,
+            "avg": 573.173
+        },
+        "checks": {
+            "passes": 3,
+            "fails": 0,
+            "value": 1
+        },
+        "data_received": {
+            "count": 5103,
+            "rate": 2694.545327817867
+        },
+        "http_req_waiting": {
+            "min": 316.836,
+            "med": 316.836,
+            "max": 316.836,
+            "p(90)": 316.836,
+            "p(95)": 316.836,
+            "p(99)": 316.836,
+            "avg": 316.836
+        },
+        "http_req_connecting": {
+            "min": 273.605,
+            "med": 273.605,
+            "max": 273.605,
+            "p(90)": 273.605,
+            "p(95)": 273.605,
+            "p(99)": 273.605,
+            "avg": 273.605
+        },
+        "http_req_sending": {
+            "avg": 0.12,
+            "min": 0.12,
+            "med": 0.12,
+            "max": 0.12,
+            "p(90)": 0.12,
+            "p(95)": 0.12,
+            "p(99)": 0.12
+        },
+        "http_req_receiving": {
+            "p(99)": 0.128,
+            "avg": 0.128,
+            "min": 0.128,
+            "med": 0.128,
+            "max": 0.128,
+            "p(90)": 0.128,
+            "p(95)": 0.128
+        },
+        "data_sent": {
+            "count": 1897,
+            "rate": 1001.6759723438162
+        },
+        "iterations": {
+            "count": 1,
+            "rate": 0.5280316143088118
+        },
+        "iteration_duration": {
+            "avg": 1893.487584,
+            "min": 1893.487584,
+            "med": 1893.487584,
+            "max": 1893.487584,
+            "p(90)": 1893.487584,
+            "p(95)": 1893.487584,
+            "p(99)": 1893.487584
+        },
+        "http_reqs": {
+            "count": 1,
+            "rate": 0.5280316143088118
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 1,
+            "value": 0
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "http_req_duration": {
+            "p(95)": 317.084,
+            "p(99)": 317.084,
+            "avg": 317.084,
+            "min": 317.084,
+            "med": 317.084,
+            "max": 317.084,
+            "p(90)": 317.084
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 295.103,
+            "p(99)": 295.103,
+            "avg": 295.103,
+            "min": 295.103,
+            "med": 295.103,
+            "max": 295.103,
+            "p(90)": 295.103
+        },
+        "vus_max": {
+            "min": 1,
+            "max": 1,
+            "value": 1
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 317.084,
+            "p(95)": 317.084,
+            "p(99)": 317.084,
+            "avg": 317.084,
+            "min": 317.084,
+            "med": 317.084,
+            "max": 317.084
+        }
+    },
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "status is 200": {
+                    "path": "::status is 200",
+                    "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+                    "passes": 1,
+                    "fails": 0,
+                    "name": "status is 200"
+                },
+                "pizza has a name": {
+                    "name": "pizza has a name",
+                    "path": "::pizza has a name",
+                    "id": "87f6d930c504290631907e96d865988e",
+                    "passes": 1,
+                    "fails": 0
+                },
+                "every ingredient is vegetarian": {
+                    "name": "every ingredient is vegetarian",
+                    "path": "::every ingredient is vegetarian",
+                    "id": "c3970a9f0b07aa8ece89d22f9396d30b",
+                    "passes": 1,
+                    "fails": 0
+                }
+            },
+        "name": ""
+    }
+}

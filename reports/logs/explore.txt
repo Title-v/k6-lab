@@ -1,0 +1,33 @@
+$ k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/explore.json explore.js
+time="2026-10-30T22:00:23+07:00" level=info msg="{\"ingredients\":[{\"ID\":9,\"name\":\"Pepperoni\",\"caloriesPerSlice\":100,\"vegetarian\":false},{\"ID\":10,\"name\":\"Mushrooms\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":11,\"name\":\"Onions\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":12,\"name\":\"Sausage\",\"caloriesPerSlice\":200,\"vegetarian\":false},{\"ID\":13,\"name\":\"Bacon\",\"caloriesPerSlice\":250,\"vegetarian\":false},{\"ID\":14,\"name\":\"Extra cheese\",\"caloriesPerSlice\":100,\"vegetarian\":true},{\"ID\":15,\"name\":\"Black olives\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":16,\"name\":\"Green peppers\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":17,\"name\":\"Pineapple\",\"caloriesPerSlice\":75,\"vegetarian\":true},{\"ID\":18,\"name\":\"Spinach\",\"caloriesPerSlice\":25,\"vegetarian\":true},{\"ID\":19,\"name\":\"Garlic\",\"caloriesPerSlice\":25,\"vegetarian\":true},{\"ID\":20,\"name\":\"Jalapenos\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":21,\"name\":\"Roasted red peppers\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":22,\"name\":\"Feta cheese\",\"caloriesPerSlice\":100,\"vegetarian\":true},{\"ID\":23,\"name\":\"Prosciutto\",\"caloriesPerSlice\":100,\"vegetarian\":false},{\"ID\":24,\"name\":\"Ricotta cheese\",\"caloriesPerSlice\":100,\"vegetarian\":true},{\"ID\":25,\"name\":\"Salami\",\"caloriesPerSlice\":100,\"vegetarian\":false},{\"ID\":26,\"name\":\"Zucchini\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":27,\"name\":\"Buffalo mozzarella\",\"caloriesPerSlice\":150,\"vegetarian\":true},{\"ID\":28,\"name\":\"Eggplant\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":29,\"name\":\"Kalamata olives\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":30,\"name\":\"Parmesan cheese\",\"caloriesPerSlice\":100,\"vegetarian\":true},{\"ID\":31,\"name\":\"Shrimp\",\"caloriesPerSlice\":100,\"vegetarian\":false},{\"ID\":32,\"name\":\"Chicken\",\"caloriesPerSlice\":100,\"vegetarian\":false},{\"ID\":33,\"name\":\"Beef\",\"caloriesPerSlice\":100,\"vegetarian\":false},{\"ID\":34,\"name\":\"Ham\",\"caloriesPerSlice\":100,\"vegetarian\":false},{\"ID\":35,\"name\":\"Asparagus\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":36,\"name\":\"Broccoli\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":37,\"name\":\"Caramelized onions\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":38,\"name\":\"Cherry tomatoes\",\"caloriesPerSlice\":50,\"vegetarian\":true},{\"ID\":39,\"name\":\"Fresh basil\",\"caloriesPerSlice\":25,\"vegetarian\":true},{\"ID\":40,\"name\":\"Fresh oregano\",\"caloriesPerSlice\":25,\"vegetarian\":true}]}\n" source=console
+time="2026-10-30T22:00:23+07:00" level=info msg="{\"tools\":[\"Knife\",\"Pizza cutter\",\"Scissors\"]}\n" source=console
+
+
+  █ TOTAL RESULTS 
+
+    HTTP
+    http_req_blocked...............: avg=280.39ms min=1µs      med=280.39ms max=560.78ms p(90)=504.7ms  p(95)=532.74ms p(99)=555.17ms
+    http_req_connecting............: avg=130.01ms min=0s       med=130.01ms max=260.02ms p(90)=234.01ms p(95)=247.01ms p(99)=257.42ms
+    http_req_duration..............: avg=260.97ms min=260.5ms  med=260.97ms max=261.45ms p(90)=261.35ms p(95)=261.4ms  p(99)=261.44ms
+      { expected_response:true }...: avg=260.97ms min=260.5ms  med=260.97ms max=261.45ms p(90)=261.35ms p(95)=261.4ms  p(99)=261.44ms
+    http_req_failed................: 0.00%  0 out of 2
+    http_req_receiving.............: avg=121.5µs  min=118µs    med=121.5µs  max=125µs    p(90)=124.3µs  p(95)=124.65µs p(99)=124.93µs
+    http_req_sending...............: avg=352µs    min=171µs    med=352µs    max=533µs    p(90)=496.8µs  p(95)=514.9µs  p(99)=529.38µs
+    http_req_tls_handshaking.......: avg=145.61ms min=0s       med=145.61ms max=291.22ms p(90)=262.1ms  p(95)=276.66ms p(99)=288.31ms
+    http_req_waiting...............: avg=260.5ms  min=259.84ms med=260.5ms  max=261.15ms p(90)=261.02ms p(95)=261.09ms p(99)=261.14ms
+    http_reqs......................: 2      1.843172/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.08s    min=1.08s    med=1.08s    max=1.08s    p(90)=1.08s    p(95)=1.08s    p(99)=1.08s   
+    iterations.....................: 1      0.921586/s
+    vus............................: 1      min=1      max=1
+    vus_max........................: 1      min=1      max=1
+
+    NETWORK
+    data_received..................: 7.2 kB 6.6 kB/s
+    data_sent......................: 2.1 kB 1.9 kB/s
+
+
+
+
+Exit code: 0

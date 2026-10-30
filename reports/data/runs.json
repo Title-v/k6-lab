@@ -1,0 +1,90 @@
+[
+  {
+    "name": "0.1",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.1.json 01-first-test.js",
+    "started_utc": "2026-10-30T14:57:26.148636+00:00",
+    "ended_utc": "2026-10-30T14:57:28.316999+00:00",
+    "elapsed_seconds": 2.168,
+    "exit_code": 0
+  },
+  {
+    "name": "0.2",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.2.json --vus 5 --duration 20s 01-first-test.js",
+    "started_utc": "2026-10-30T14:57:28.317856+00:00",
+    "ended_utc": "2026-10-30T14:57:49.382582+00:00",
+    "elapsed_seconds": 21.065,
+    "exit_code": 0
+  },
+  {
+    "name": "0.3",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.3.json --vus 5 --iterations 20 01-first-test.js",
+    "started_utc": "2026-10-30T14:57:49.385281+00:00",
+    "ended_utc": "2026-10-30T14:57:55.285731+00:00",
+    "elapsed_seconds": 5.9,
+    "exit_code": 0
+  },
+  {
+    "name": "0.4",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.4.json 04-pizza-api.js",
+    "started_utc": "2026-10-30T14:57:55.288527+00:00",
+    "ended_utc": "2026-10-30T14:57:57.254261+00:00",
+    "elapsed_seconds": 1.966,
+    "exit_code": 0
+  },
+  {
+    "name": "0.5",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.5.json 05-no-token.js",
+    "started_utc": "2026-10-30T14:57:57.256516+00:00",
+    "ended_utc": "2026-10-30T14:57:59.162489+00:00",
+    "elapsed_seconds": 1.906,
+    "exit_code": 0
+  },
+  {
+    "name": "0.6-normal",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.6-normal.json 06-thresholds.js",
+    "started_utc": "2026-10-30T14:57:59.163321+00:00",
+    "ended_utc": "2026-10-30T14:58:30.434755+00:00",
+    "elapsed_seconds": 31.271,
+    "exit_code": 0
+  },
+  {
+    "name": "0.6-strict",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.6-strict.json -e P95=300 06-thresholds.js",
+    "started_utc": "2026-10-30T14:58:30.438478+00:00",
+    "ended_utc": "2026-10-30T14:59:00.620403+00:00",
+    "elapsed_seconds": 30.182,
+    "exit_code": 99
+  },
+  {
+    "name": "0.7-normal",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.7-normal.json 07-requirement.js",
+    "started_utc": "2026-10-30T14:59:00.629403+00:00",
+    "ended_utc": "2026-10-30T14:59:31.070341+00:00",
+    "elapsed_seconds": 30.441,
+    "exit_code": 0
+  },
+  {
+    "name": "0.7-fail",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.7-fail.json -e P95=1 07-requirement.js",
+    "started_utc": "2026-10-30T14:59:31.072730+00:00",
+    "ended_utc": "2026-10-30T15:00:01.561243+00:00",
+    "elapsed_seconds": 30.489,
+    "exit_code": 99
+  },
+  {
+    "name": "0.8-before",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.8-before.json --vus 5 --duration 20s 08-bug-hunt.js",
+    "started_utc": "2026-10-30T15:00:01.575637+00:00",
+    "ended_utc": "2026-10-30T15:00:22.829838+00:00",
+    "elapsed_seconds": 21.254,
+    "exit_code": 0
+  },
+  {
+    "name": "explore",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/explore.json explore.js",
+    "started_utc": "2026-10-30T15:00:22.840940+00:00",
+    "ended_utc": "2026-10-30T15:00:23.992222+00:00",
+    "elapsed_seconds": 1.151,
+    "exit_code": 0
+  }
+]

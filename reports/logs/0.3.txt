@@ -1,0 +1,37 @@
+$ k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.3.json --vus 5 --iterations 20 01-first-test.js
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 20      3.475121/s
+    checks_succeeded...: 100.00% 20 out of 20
+    checks_failed......: 0.00%   0 out of 20
+
+    ✓ status is 200
+
+    HTTP
+    http_req_blocked...............: avg=161.56ms min=0s       med=1µs      max=654.24ms p(90)=645.06ms p(95)=650.88ms p(99)=653.57ms
+    http_req_connecting............: avg=66.65ms  min=0s       med=0s       max=272.92ms p(90)=269.97ms p(95)=272.82ms p(99)=272.9ms 
+    http_req_duration..............: avg=268.25ms min=259.16ms med=270.87ms max=276.75ms p(90)=274.6ms  p(95)=275.85ms p(99)=276.57ms
+      { expected_response:true }...: avg=268.25ms min=259.16ms med=270.87ms max=276.75ms p(90)=274.6ms  p(95)=275.85ms p(99)=276.57ms
+    http_req_failed................: 0.00%  0 out of 20
+    http_req_receiving.............: avg=189.55µs min=62µs     med=140µs    max=1.09ms   p(90)=265.9µs  p(95)=340.69µs p(99)=944.13µs
+    http_req_sending...............: avg=128.75µs min=24µs     med=113.99µs max=268µs    p(90)=240.1µs  p(95)=268µs    p(99)=268µs   
+    http_req_tls_handshaking.......: avg=70.09ms  min=0s       med=0s       max=283.56ms p(90)=282.05ms p(95)=282.22ms p(99)=283.29ms
+    http_req_waiting...............: avg=267.93ms min=258.86ms med=270.61ms max=276.38ms p(90)=274.34ms p(95)=275.56ms p(99)=276.22ms
+    http_reqs......................: 20     3.475121/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.43s    min=1.25s    med=1.27s    max=1.92s    p(90)=1.91s    p(95)=1.92s    p(99)=1.92s   
+    iterations.....................: 20     3.475121/s
+    vus............................: 5      min=5       max=5
+    vus_max........................: 5      min=5       max=5
+
+    NETWORK
+    data_received..................: 87 kB  15 kB/s
+    data_sent......................: 9.9 kB 1.7 kB/s
+
+
+
+
+Exit code: 0

@@ -1,0 +1,49 @@
+$ k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.7-fail.json -e P95=1 07-requirement.js
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✗ 'p(95)<1' p(95)=387.34ms
+    ✓ 'p(99)<1500' p(99)=395.54ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 132     4.362438/s
+    checks_succeeded...: 100.00% 132 out of 132
+    checks_failed......: 0.00%   0 out of 132
+
+    ✓ status is 200
+    ✓ pizza has a name
+
+    HTTP
+    http_req_blocked...............: avg=30ms     min=0s       med=1µs      max=662.13ms p(90)=2.5µs    p(95)=4µs      p(99)=660.42ms
+    http_req_connecting............: avg=12.38ms  min=0s       med=0s       max=272.6ms  p(90)=0s       p(95)=0s       p(99)=272.6ms 
+    http_req_duration..............: avg=339.35ms min=290.65ms med=340.06ms max=399.96ms p(90)=381.37ms p(95)=387.34ms p(99)=395.54ms
+      { expected_response:true }...: avg=339.35ms min=290.65ms med=340.06ms max=399.96ms p(90)=381.37ms p(95)=387.34ms p(99)=395.54ms
+    http_req_failed................: 0.00% 0 out of 66
+    http_req_receiving.............: avg=124.1µs  min=41µs     med=113µs    max=370µs    p(90)=177.5µs  p(95)=218.99µs p(99)=320.59µs
+    http_req_sending...............: avg=332.86µs min=42µs     med=321.5µs  max=708µs    p(90)=517µs    p(95)=549.99µs p(99)=675.5µs 
+    http_req_tls_handshaking.......: avg=13.89ms  min=0s       med=0s       max=307.99ms p(90)=0s       p(95)=0s       p(99)=306.22ms
+    http_req_waiting...............: avg=338.9ms  min=290.1ms  med=339.55ms max=399.51ms p(90)=380.9ms  p(95)=386.72ms p(99)=395.05ms
+    http_reqs......................: 66    2.181219/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.37s    min=1.29s    med=1.34s    max=1.98s    p(90)=1.38s    p(95)=1.4s     p(99)=1.97s   
+    iterations.....................: 66    2.181219/s
+    vus............................: 3     min=3       max=3
+    vus_max........................: 3     min=3       max=3
+
+    NETWORK
+    data_received..................: 86 kB 2.8 kB/s
+    data_sent......................: 12 kB 396 B/s
+
+
+
+time="2026-10-30T22:00:01+07:00" level=error msg="thresholds on metrics 'http_req_duration' have been crossed"
+
+Exit code: 99

@@ -1,0 +1,41 @@
+$ k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.8-before.json --vus 5 --duration 20s 08-bug-hunt.js
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 225    10.693177/s
+    checks_succeeded...: 88.88% 200 out of 225
+    checks_failed......: 11.11% 25 out of 225
+
+    ✓ status is 200
+    ✗ no pepperoni
+      ↳  93% — ✓ 70 / ✗ 5
+    ✗ no knife needed
+      ↳  73% — ✓ 55 / ✗ 20
+
+    HTTP
+    http_req_blocked...............: avg=39.59ms  min=0s       med=1µs      max=597.82ms p(90)=2µs      p(95)=591.13ms p(99)=596.49ms
+    http_req_connecting............: avg=18.11ms  min=0s       med=0s       max=272.34ms p(90)=0s       p(95)=270.98ms p(99)=272.31ms
+    http_req_duration..............: avg=352.79ms min=287.06ms med=353.5ms  max=478.02ms p(90)=391.33ms p(95)=412.87ms p(99)=471.58ms
+      { expected_response:true }...: avg=352.79ms min=287.06ms med=353.5ms  max=478.02ms p(90)=391.33ms p(95)=412.87ms p(99)=471.58ms
+    http_req_failed................: 0.00%  0 out of 75
+    http_req_receiving.............: avg=202.42µs min=18µs     med=76µs     max=6.03ms   p(90)=226.8µs  p(95)=540.5µs  p(99)=2.35ms  
+    http_req_sending...............: avg=312.28µs min=49µs     med=242µs    max=1.25ms   p(90)=595µs    p(95)=977.59µs p(99)=1.22ms  
+    http_req_tls_handshaking.......: avg=20.63ms  min=0s       med=0s       max=314.42ms p(90)=0s       p(95)=306.36ms p(99)=312.99ms
+    http_req_waiting...............: avg=352.27ms min=285.81ms med=352.97ms max=477.73ms p(90)=390.97ms p(95)=412.65ms p(99)=471.24ms
+    http_reqs......................: 75     3.564392/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.39s    min=1.28s    med=1.35s    max=1.98s    p(90)=1.44s    p(95)=1.91s    p(99)=1.97s   
+    iterations.....................: 75     3.564392/s
+    vus............................: 1      min=1       max=5
+    vus_max........................: 5      min=5       max=5
+
+    NETWORK
+    data_received..................: 105 kB 5.0 kB/s
+    data_sent......................: 19 kB  919 B/s
+
+
+
+
+Exit code: 0
