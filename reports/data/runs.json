@@ -126,5 +126,13 @@
     "ended_utc": "2026-10-30T15:10:49.426671+00:00",
     "elapsed_seconds": 140.519,
     "exit_code": 0
+  },
+  {
+    "name": "a5-soak",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/a5-soak.json --out web-dashboard=export=reports/a5-soak.html --out json=reports/data/a5-soak.json.gz a5-soak.js",
+    "started_utc": "2026-10-30T15:10:49.689048+00:00",
+    "ended_utc": "2026-10-30T15:21:49.887535+00:00",
+    "elapsed_seconds": 660.198,
+    "exit_code": 0
   }
 ]

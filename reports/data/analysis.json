@@ -19,5 +19,189 @@
     "check_pass_rate": 1,
     "exit_code": 0,
     "elapsed_seconds": 180.119
+  },
+  "a3-stress": {
+    "http_reqs": 390,
+    "requests_per_second": 2.1666591676185476,
+    "p95_ms": 381.64029999999997,
+    "max_ms": 2357.352,
+    "failure_rate": 0,
+    "check_pass_rate": 1,
+    "exit_code": 0,
+    "elapsed_seconds": 180.228
+  },
+  "a4-spike": {
+    "http_reqs": 145,
+    "requests_per_second": 1.03566657847311,
+    "p95_ms": 369.441,
+    "max_ms": 394.571,
+    "failure_rate": 0,
+    "check_pass_rate": 1,
+    "exit_code": 0,
+    "elapsed_seconds": 140.519,
+    "windows": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 30,
+        "requests": 15,
+        "p95_ms": 385.0489,
+        "average_ms": 308.5963333333333,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 35,
+        "end_seconds": 65,
+        "requests": 76,
+        "p95_ms": 365.33175,
+        "average_ms": 291.52671052631575,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 70,
+        "end_seconds": 80,
+        "requests": 6,
+        "p95_ms": 334.7655,
+        "average_ms": 299.2198333333333,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 70,
+        "end_seconds": 90,
+        "requests": 11,
+        "p95_ms": 355.3835,
+        "average_ms": 306.7105454545454,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 90,
+        "end_seconds": 110,
+        "requests": 10,
+        "p95_ms": 383.05965,
+        "average_ms": 311.0184,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 110,
+        "end_seconds": 130,
+        "requests": 8,
+        "p95_ms": 376.7223,
+        "average_ms": 316.860625,
+        "failure_rate": 0.0
+      }
+    ],
+    "ten_second_windows": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 10,
+        "requests": 4,
+        "p95_ms": 288.97945,
+        "average_ms": 278.2845,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 10,
+        "end_seconds": 20,
+        "requests": 5,
+        "p95_ms": 391.85040000000004,
+        "average_ms": 319.9406,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 20,
+        "end_seconds": 30,
+        "requests": 6,
+        "p95_ms": 361.44325000000003,
+        "average_ms": 319.35066666666665,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 30,
+        "end_seconds": 40,
+        "requests": 19,
+        "p95_ms": 364.1888,
+        "average_ms": 293.24773684210527,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 40,
+        "end_seconds": 50,
+        "requests": 26,
+        "p95_ms": 344.59075,
+        "average_ms": 284.5943461538461,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 50,
+        "end_seconds": 60,
+        "requests": 25,
+        "p95_ms": 364.49,
+        "average_ms": 295.16276,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 60,
+        "end_seconds": 70,
+        "requests": 25,
+        "p95_ms": 366.9468,
+        "average_ms": 287.82704,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 70,
+        "end_seconds": 80,
+        "requests": 6,
+        "p95_ms": 334.7655,
+        "average_ms": 299.2198333333333,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 80,
+        "end_seconds": 90,
+        "requests": 5,
+        "p95_ms": 356.3852,
+        "average_ms": 315.69939999999997,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 90,
+        "end_seconds": 100,
+        "requests": 4,
+        "p95_ms": 378.9395999999999,
+        "average_ms": 316.47074999999995,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 100,
+        "end_seconds": 110,
+        "requests": 6,
+        "p95_ms": 362.27824999999996,
+        "average_ms": 307.38349999999997,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 110,
+        "end_seconds": 120,
+        "requests": 4,
+        "p95_ms": 380.8707,
+        "average_ms": 345.54725,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 120,
+        "end_seconds": 130,
+        "requests": 4,
+        "p95_ms": 320.9837,
+        "average_ms": 288.174,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 130,
+        "end_seconds": 140,
+        "requests": 6,
+        "p95_ms": 333.9515,
+        "average_ms": 294.55233333333337,
+        "failure_rate": 0.0
+      }
+    ]
   }
 }
