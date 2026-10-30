@@ -1,0 +1,146 @@
+$ k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/a3-stress.json --out web-dashboard=export=reports/a3-stress.html --out json=reports/data/a3-stress.json.gz a3-stress.js
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate>0.99' rate=100.00%
+
+    http_req_duration{group:::home}
+    ✓ 'p(95)<1000' p(95)=339.08ms
+
+    http_req_duration{group:::recommendation}
+    ✓ 'p(95)<1500' p(95)=386.81ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 520     2.888879/s
+    checks_succeeded...: 100.00% 520 out of 520
+    checks_failed......: 0.00%   0 out of 520
+
+    ✓ home page is 200
+    ✓ quotes are listed
+    ✓ recommendation is 200
+    ✓ pizza has a name
+
+    HTTP
+    http_req_blocked...............: avg=7.55ms   min=0s       med=1µs      max=659.87ms p(90)=2µs      p(95)=3.54µs   p(99)=551.97ms
+    http_req_connecting............: avg=3.74ms   min=0s       med=0s       max=379.07ms p(90)=0s       p(95)=0s       p(99)=257.55ms
+    http_req_duration..............: avg=315.84ms min=256.64ms med=280.42ms max=2.35s    p(90)=368.76ms p(95)=381.64ms p(99)=562.68ms
+      { expected_response:true }...: avg=315.84ms min=256.64ms med=280.42ms max=2.35s    p(90)=368.76ms p(95)=381.64ms p(99)=562.68ms
+      { group:::home }.............: avg=295.01ms min=257.33ms med=274.02ms max=2.35s    p(90)=310.32ms p(95)=339.08ms p(99)=370.95ms
+      { group:::recommendation }...: avg=348.73ms min=276.29ms med=342.81ms max=1.11s    p(90)=382.8ms  p(95)=386.81ms p(99)=511.72ms
+    http_req_failed................: 0.00%  0 out of 390
+    http_req_receiving.............: avg=127.72µs min=31µs     med=106µs    max=1.48ms   p(90)=199.1µs  p(95)=240.19µs p(99)=821.5µs 
+    http_req_sending...............: avg=248.01µs min=24µs     med=223.5µs  max=794µs    p(90)=424.1µs  p(95)=488µs    p(99)=630.48µs
+    http_req_tls_handshaking.......: avg=3.65ms   min=0s       med=0s       max=299.73ms p(90)=0s       p(95)=0s       p(99)=279.16ms
+    http_req_waiting...............: avg=315.47ms min=256.44ms med=280.13ms max=2.35s    p(90)=368.32ms p(95)=381.21ms p(99)=562.39ms
+    http_reqs......................: 390    2.166659/s
+
+    EXECUTION
+    iteration_duration.............: avg=5.98s    min=4.06s    med=6.08s    max=8.65s    p(90)=7.27s    p(95)=7.39s    p(99)=7.63s   
+    iterations.....................: 129    0.716664/s
+    vus............................: 1      min=1        max=5
+    vus_max........................: 5      min=5        max=5
+
+    NETWORK
+    data_received..................: 724 kB 4.0 kB/s
+    data_sent......................: 93 kB  518 B/s
+
+
+  █ SCENARIO: load 
+
+    checks_total.......: 520     2.888879/s
+    checks_succeeded...: 100.00% 520 out of 520
+    checks_failed......: 0.00%   0 out of 520
+
+    ✓ home page is 200
+    ✓ quotes are listed
+    ✓ recommendation is 200
+    ✓ pizza has a name
+
+    HTTP
+    http_req_blocked...........: avg=7.55ms   min=0s       med=1µs      max=659.87ms p(90)=2µs      p(95)=3.54µs   p(99)=551.97ms
+    http_req_connecting........: avg=3.74ms   min=0s       med=0s       max=379.07ms p(90)=0s       p(95)=0s       p(99)=257.55ms
+    http_req_duration..........: avg=315.84ms min=256.64ms med=280.42ms max=2.35s    p(90)=368.76ms p(95)=381.64ms p(99)=562.68ms
+    http_req_failed............: 0.00%  0 out of 390
+    http_req_receiving.........: avg=127.72µs min=31µs     med=106µs    max=1.48ms   p(90)=199.1µs  p(95)=240.19µs p(99)=821.5µs 
+    http_req_sending...........: avg=248.01µs min=24µs     med=223.5µs  max=794µs    p(90)=424.1µs  p(95)=488µs    p(99)=630.48µs
+    http_req_tls_handshaking...: avg=3.65ms   min=0s       med=0s       max=299.73ms p(90)=0s       p(95)=0s       p(99)=279.16ms
+    http_req_waiting...........: avg=315.47ms min=256.44ms med=280.13ms max=2.35s    p(90)=368.32ms p(95)=381.21ms p(99)=562.39ms
+    http_reqs..................: 390    2.166659/s
+
+    EXECUTION
+    iteration_duration.........: avg=5.98s    min=4.06s    med=6.08s    max=8.65s    p(90)=7.27s    p(95)=7.39s    p(99)=7.63s   
+    iterations.................: 129    0.716664/s
+
+    NETWORK
+    data_received..............: 724 kB 4.0 kB/s
+    data_sent..................: 93 kB  518 B/s
+
+    ↳ GROUP: home 
+
+      checks_total.......: 130     0.72222/s
+      checks_succeeded...: 100.00% 130 out of 130
+      checks_failed......: 0.00%   0 out of 130
+
+      ✓ home page is 200
+
+      HTTP
+      http_req_blocked...........: avg=22.65ms  min=0s       med=1µs      max=659.87ms p(90)=2µs      p(95)=6.54µs   p(99)=601.56ms
+      http_req_connecting........: avg=11.22ms  min=0s       med=0s       max=379.07ms p(90)=0s       p(95)=0s       p(99)=278.61ms
+      http_req_duration..........: avg=295.01ms min=257.33ms med=274.02ms max=2.35s    p(90)=310.32ms p(95)=339.08ms p(99)=370.95ms
+      http_req_failed............: 0.00% 0 out of 130
+      http_req_receiving.........: avg=154.73µs min=35µs     med=118µs    max=1.34ms   p(90)=225.6µs  p(95)=287.49µs p(99)=1.11ms  
+      http_req_sending...........: avg=190.31µs min=24µs     med=165.5µs  max=728µs    p(90)=304.2µs  p(95)=336.15µs p(99)=460.82µs
+      http_req_tls_handshaking...: avg=10.95ms  min=0s       med=0s       max=299.73ms p(90)=0s       p(95)=0s       p(99)=282.43ms
+      http_req_waiting...........: avg=294.66ms min=257.11ms med=273.72ms max=2.35s    p(90)=310.05ms p(95)=338.81ms p(99)=370.72ms
+      http_reqs..................: 130   0.72222/s
+
+    ↳ GROUP: quotes 
+
+      checks_total.......: 130     0.72222/s
+      checks_succeeded...: 100.00% 130 out of 130
+      checks_failed......: 0.00%   0 out of 130
+
+      ✓ quotes are listed
+
+      HTTP
+      http_req_blocked...........: avg=1.24µs   min=0s       med=1µs      max=6µs    p(90)=2µs      p(95)=4µs      p(99)=4.7µs   
+      http_req_connecting........: avg=0s       min=0s       med=0s       max=0s     p(90)=0s       p(95)=0s       p(99)=0s      
+      http_req_duration..........: avg=303.8ms  min=256.64ms med=273.36ms max=2.3s   p(90)=339.38ms p(95)=376ms    p(99)=587.67ms
+      http_req_failed............: 0.00% 0 out of 130
+      http_req_receiving.........: avg=120.61µs min=31µs     med=97µs     max=1.48ms p(90)=168.5µs  p(95)=205.04µs p(99)=661.59µs
+      http_req_sending...........: avg=249.89µs min=81µs     med=228.5µs  max=683µs  p(90)=393.7µs  p(95)=451.6µs  p(99)=568.27µs
+      http_req_tls_handshaking...: avg=0s       min=0s       med=0s       max=0s     p(90)=0s       p(95)=0s       p(99)=0s      
+      http_req_waiting...........: avg=303.42ms min=256.44ms med=273.02ms max=2.3s   p(90)=339.02ms p(95)=375.8ms  p(99)=587.18ms
+      http_reqs..................: 130   0.72222/s
+
+    ↳ GROUP: recommendation 
+
+      checks_total.......: 260     1.444439/s
+      checks_succeeded...: 100.00% 260 out of 260
+      checks_failed......: 0.00%   0 out of 260
+
+      ✓ recommendation is 200
+      ✓ pizza has a name
+
+      HTTP
+      http_req_blocked...........: avg=1.14µs   min=0s       med=1µs      max=6µs   p(90)=2µs      p(95)=2.54µs   p(99)=4.41µs  
+      http_req_connecting........: avg=0s       min=0s       med=0s       max=0s    p(90)=0s       p(95)=0s       p(99)=0s      
+      http_req_duration..........: avg=348.73ms min=276.29ms med=342.81ms max=1.11s p(90)=382.8ms  p(95)=386.81ms p(99)=511.72ms
+      http_req_failed............: 0.00% 0 out of 130
+      http_req_receiving.........: avg=107.81µs min=33µs     med=101µs    max=320µs p(90)=178.2µs  p(95)=211.19µs p(99)=261.84µs
+      http_req_sending...........: avg=303.81µs min=101µs    med=279.5µs  max=794µs p(90)=490.3µs  p(95)=559.75µs p(99)=696.41µs
+      http_req_tls_handshaking...: avg=0s       min=0s       med=0s       max=0s    p(90)=0s       p(95)=0s       p(99)=0s      
+      http_req_waiting...........: avg=348.32ms min=275.96ms med=342.27ms max=1.11s p(90)=382.38ms p(95)=386.48ms p(99)=511.45ms
+      http_reqs..................: 130   0.72222/s
+
+
+
+
+Exit code: 0

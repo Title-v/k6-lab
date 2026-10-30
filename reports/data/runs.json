@@ -110,5 +110,13 @@
     "ended_utc": "2026-10-30T15:05:28.432236+00:00",
     "elapsed_seconds": 180.119,
     "exit_code": 0
+  },
+  {
+    "name": "a3-stress",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/a3-stress.json --out web-dashboard=export=reports/a3-stress.html --out json=reports/data/a3-stress.json.gz a3-stress.js",
+    "started_utc": "2026-10-30T15:05:28.539551+00:00",
+    "ended_utc": "2026-10-30T15:08:28.767508+00:00",
+    "elapsed_seconds": 180.228,
+    "exit_code": 0
   }
 ]

@@ -1,0 +1,23 @@
+{
+  "method": "Time offsets are from recorded k6 process start (UTC). Window p95 uses linear interpolation at index (n-1)*0.95.",
+  "a1-smoke": {
+    "http_reqs": 18,
+    "requests_per_second": 0.5012386302718782,
+    "p95_ms": 388.26965,
+    "max_ms": 391.696,
+    "failure_rate": 0,
+    "check_pass_rate": 1,
+    "exit_code": 0,
+    "elapsed_seconds": 36.106
+  },
+  "a2-average": {
+    "http_reqs": 236,
+    "requests_per_second": 1.3110754571424292,
+    "p95_ms": 377.51475,
+    "max_ms": 852.302,
+    "failure_rate": 0,
+    "check_pass_rate": 1,
+    "exit_code": 0,
+    "elapsed_seconds": 180.119
+  }
+}
