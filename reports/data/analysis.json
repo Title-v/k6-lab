@@ -203,5 +203,33 @@
         "failure_rate": 0.0
       }
     ]
+  },
+  "a5-soak": {
+    "http_reqs": 644,
+    "requests_per_second": 0.9757618277136614,
+    "p95_ms": 386.88755,
+    "max_ms": 1661.022,
+    "failure_rate": 0,
+    "check_pass_rate": 1,
+    "exit_code": 0,
+    "elapsed_seconds": 660.198,
+    "windows": [
+      {
+        "start_seconds": 30,
+        "end_seconds": 150,
+        "requests": 120,
+        "p95_ms": 388.63395,
+        "average_ms": 324.41445833333336,
+        "failure_rate": 0.0
+      },
+      {
+        "start_seconds": 510,
+        "end_seconds": 630,
+        "requests": 120,
+        "p95_ms": 385.17645,
+        "average_ms": 317.85068333333334,
+        "failure_rate": 0.0
+      }
+    ]
   }
 }
