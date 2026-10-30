@@ -1,0 +1,150 @@
+{
+    "metrics": {
+        "http_req_duration": {
+            "avg": 327.04958666666664,
+            "min": 277.643,
+            "med": 328.216,
+            "max": 385.35,
+            "p(90)": 364.33820000000003,
+            "p(95)": 370.67,
+            "p(99)": 379.615
+        },
+        "data_sent": {
+            "count": 19335,
+            "rate": 931.352280158473
+        },
+        "iterations": {
+            "count": 75,
+            "rate": 3.612693096037521
+        },
+        "http_req_receiving": {
+            "med": 0.083,
+            "max": 0.295,
+            "p(90)": 0.13440000000000002,
+            "p(95)": 0.1493,
+            "p(99)": 0.22025999999999993,
+            "avg": 0.0917066666666667,
+            "min": 0.03
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 75,
+            "value": 0
+        },
+        "vus": {
+            "value": 5,
+            "min": 5,
+            "max": 5
+        },
+        "http_req_blocked": {
+            "max": 695.015,
+            "p(90)": 0.002,
+            "p(95)": 687.6015,
+            "p(99)": 693.0873,
+            "avg": 46.029053333333465,
+            "min": 0,
+            "med": 0.001
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 283.0154,
+            "p(99)": 287.9714,
+            "avg": 19.05904,
+            "min": 0,
+            "med": 0,
+            "max": 290.147,
+            "p(90)": 0
+        },
+        "data_received": {
+            "count": 104890,
+            "rate": 5052.471717911675
+        },
+        "http_req_sending": {
+            "avg": 0.2561333333333333,
+            "min": 0.04,
+            "med": 0.235,
+            "max": 0.849,
+            "p(90)": 0.40180000000000005,
+            "p(95)": 0.47299999999999986,
+            "p(99)": 0.81348
+        },
+        "http_req_connecting": {
+            "p(99)": 270.4316,
+            "avg": 17.619253333333337,
+            "min": 0,
+            "med": 0,
+            "max": 271.512,
+            "p(90)": 0,
+            "p(95)": 259.28090000000003
+        },
+        "checks": {
+            "passes": 225,
+            "fails": 0,
+            "value": 1
+        },
+        "vus_max": {
+            "min": 5,
+            "max": 5,
+            "value": 5
+        },
+        "http_reqs": {
+            "count": 75,
+            "rate": 3.612693096037521
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(99)": 379.615,
+            "avg": 327.04958666666664,
+            "min": 277.643,
+            "med": 328.216,
+            "max": 385.35,
+            "p(90)": 364.33820000000003,
+            "p(95)": 370.67
+        },
+        "http_req_waiting": {
+            "p(90)": 364.1404,
+            "p(95)": 370.4573,
+            "p(99)": 379.38014,
+            "avg": 326.7017466666666,
+            "min": 277.451,
+            "med": 327.98,
+            "max": 385.218
+        },
+        "iteration_duration": {
+            "p(99)": 2051.9436525,
+            "avg": 1374.781055053333,
+            "min": 1283.416083,
+            "med": 1332.259167,
+            "max": 2089.2625,
+            "p(90)": 1373.3339828,
+            "p(95)": 1977.0378833
+        }
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "status is 200": {
+                    "name": "status is 200",
+                    "path": "::status is 200",
+                    "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+                    "passes": 75,
+                    "fails": 0
+                },
+                "no pepperoni": {
+                    "fails": 0,
+                    "name": "no pepperoni",
+                    "path": "::no pepperoni",
+                    "id": "83805acfe7515906f402d035707c5291",
+                    "passes": 75
+                },
+                "no knife needed": {
+                    "id": "974be63fae97a0f98b05fc7d2ec16d8a",
+                    "passes": 75,
+                    "fails": 0,
+                    "name": "no knife needed",
+                    "path": "::no knife needed"
+                }
+            },
+        "name": "",
+        "path": ""
+    }
+}

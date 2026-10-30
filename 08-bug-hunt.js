@@ -11,8 +11,9 @@ const PARAMS = {
 
 export default function () {
   const body = JSON.stringify({
-    excludedIngredients: ['pepperoni'],
-    excludedTools: ['knife'],
+    // The API matches the case-sensitive names returned by explore.js.
+    excludedIngredients: ['Pepperoni'],
+    excludedTools: ['Knife'],
   });
   const res = http.post(`${BASE_URL}/api/pizza`, body, PARAMS);
   check(res, {

@@ -86,5 +86,13 @@
     "ended_utc": "2026-10-30T15:00:23.992222+00:00",
     "elapsed_seconds": 1.151,
     "exit_code": 0
+  },
+  {
+    "name": "0.8-fixed",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/0.8-fixed.json --vus 5 --duration 20s 08-bug-hunt.js",
+    "started_utc": "2026-10-30T15:01:18.858300+00:00",
+    "ended_utc": "2026-10-30T15:01:39.802731+00:00",
+    "elapsed_seconds": 20.944,
+    "exit_code": 0
   }
 ]
