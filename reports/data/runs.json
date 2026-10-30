@@ -94,5 +94,13 @@
     "ended_utc": "2026-10-30T15:01:39.802731+00:00",
     "elapsed_seconds": 20.944,
     "exit_code": 0
+  },
+  {
+    "name": "a1-smoke",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/a1-smoke.json a1-smoke.js",
+    "started_utc": "2026-10-30T15:01:52.153699+00:00",
+    "ended_utc": "2026-10-30T15:02:28.259417+00:00",
+    "elapsed_seconds": 36.106,
+    "exit_code": 0
   }
 ]

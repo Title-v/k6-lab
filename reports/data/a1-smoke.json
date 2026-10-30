@@ -1,0 +1,196 @@
+{
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "home": {
+                "path": "::home",
+                "id": "f55eb66156c7d05104505c362878691e",
+                "groups": {},
+                "checks": {
+                        "home page is 200": {
+                            "fails": 0,
+                            "name": "home page is 200",
+                            "path": "::home::home page is 200",
+                            "id": "ee57ca532d6d7881476bede61d609a2b",
+                            "passes": 6
+                        }
+                    },
+                "name": "home"
+            },
+            "quotes": {
+                "path": "::quotes",
+                "id": "9e2f47f8880f01e0d60415b2d2d07c7c",
+                "groups": {},
+                "checks": {
+                        "quotes are listed": {
+                            "name": "quotes are listed",
+                            "path": "::quotes::quotes are listed",
+                            "id": "34d947b68c0dccdb4c56604b2d2e21cb",
+                            "passes": 6,
+                            "fails": 0
+                        }
+                    },
+                "name": "quotes"
+            },
+            "recommendation": {
+                "name": "recommendation",
+                "path": "::recommendation",
+                "id": "ae314d7b75d0a0f15cb558215c46c014",
+                "groups": {},
+                "checks": {
+                        "recommendation is 200": {
+                            "fails": 0,
+                            "name": "recommendation is 200",
+                            "path": "::recommendation::recommendation is 200",
+                            "id": "5aba2ea8be78d79e5ba4f0ab59b413a7",
+                            "passes": 6
+                        },
+                        "pizza has a name": {
+                            "path": "::recommendation::pizza has a name",
+                            "id": "9887ee630e67056eacbfce653e3f5490",
+                            "passes": 6,
+                            "fails": 0,
+                            "name": "pizza has a name"
+                        }
+                    }
+            }
+        },
+        "checks": {},
+        "name": ""
+    },
+    "metrics": {
+        "http_req_waiting": {
+            "med": 322.192,
+            "max": 391.377,
+            "p(90)": 385.6862,
+            "p(95)": 387.75600000000003,
+            "p(99)": 390.6528,
+            "avg": 326.11311111111115,
+            "min": 270.419
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 18,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 386.1432,
+            "p(95)": 388.26965,
+            "p(99)": 391.01073,
+            "avg": 326.65511111111107,
+            "min": 271.846,
+            "med": 322.7155,
+            "max": 391.696
+        },
+        "http_req_connecting": {
+            "avg": 15.05538888888889,
+            "min": 0,
+            "med": 0,
+            "max": 270.997,
+            "p(90)": 0,
+            "p(95)": 40.6495499999998,
+            "p(99)": 224.92750999999998
+        },
+        "http_req_sending": {
+            "p(95)": 0.8737499999999999,
+            "p(99)": 0.90435,
+            "avg": 0.3700555555555555,
+            "min": 0.14,
+            "med": 0.2655,
+            "max": 0.912,
+            "p(90)": 0.8215
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "http_req_blocked": {
+            "min": 0,
+            "med": 0.001,
+            "max": 578.662,
+            "p(90)": 0.002,
+            "p(95)": 86.80099999999958,
+            "p(99)": 480.28979999999996,
+            "avg": 32.14911111111108
+        },
+        "group_duration": {
+            "p(95)": 461.69834189999966,
+            "p(99)": 777.19023478,
+            "avg": 359.55431011111114,
+            "min": 273.291708,
+            "med": 328.2985625,
+            "max": 856.063208,
+            "p(90)": 389.58944130000003
+        },
+        "vus_max": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 298.167,
+            "p(90)": 0,
+            "p(95)": 44.72504999999977,
+            "p(99)": 247.47860999999995,
+            "avg": 16.564833333333333
+        },
+        "iterations": {
+            "count": 6,
+            "rate": 0.1670795434239594
+        },
+        "data_sent": {
+            "count": 5672,
+            "rate": 157.94586171678296
+        },
+        "http_reqs": {
+            "count": 18,
+            "rate": 0.5012386302718782
+        },
+        "data_received": {
+            "rate": 1016.762561506505,
+            "count": 36513
+        },
+        "iteration_duration": {
+            "med": 6185.968,
+            "max": 7064.007458,
+            "p(90)": 6785.997146000001,
+            "p(95)": 6925.002302,
+            "p(99)": 7036.2064268,
+            "avg": 5985.012826333333,
+            "min": 4319.033375
+        },
+        "checks": {
+            "passes": 24,
+            "fails": 0,
+            "thresholds": {
+                "rate>0.99": false
+            },
+            "value": 1
+        },
+        "http_req_receiving": {
+            "max": 0.625,
+            "p(90)": 0.2397,
+            "p(95)": 0.30284999999999973,
+            "p(99)": 0.5605699999999999,
+            "avg": 0.17194444444444446,
+            "min": 0.067,
+            "med": 0.133
+        },
+        "http_req_duration": {
+            "p(99)": 391.01073,
+            "avg": 326.65511111111107,
+            "min": 271.846,
+            "med": 322.7155,
+            "max": 391.696,
+            "p(90)": 386.1432,
+            "p(95)": 388.26965
+        }
+    }
+}
