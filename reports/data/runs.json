@@ -118,5 +118,13 @@
     "ended_utc": "2026-10-30T15:08:28.767508+00:00",
     "elapsed_seconds": 180.228,
     "exit_code": 0
+  },
+  {
+    "name": "a4-spike",
+    "command": "k6 run --no-usage-report --no-color --quiet --summary-mode full --summary-trend-stats 'avg,min,med,max,p(90),p(95),p(99)' --summary-export reports/data/a4-spike.json --out web-dashboard=export=reports/a4-spike.html --out json=reports/data/a4-spike.json.gz a4-spike.js",
+    "started_utc": "2026-10-30T15:08:28.907532+00:00",
+    "ended_utc": "2026-10-30T15:10:49.426671+00:00",
+    "elapsed_seconds": 140.519,
+    "exit_code": 0
   }
 ]
